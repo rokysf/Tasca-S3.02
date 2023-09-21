@@ -5,8 +5,12 @@ import java.util.List;
 
 public class AgentBorsa implements Subject{
 	private double valor;
-	private List<Observer> observers = new ArrayList<Observer>();
-		
+	private List<Observer> observers; 
+	
+	public AgentBorsa() {
+		this.observers = new ArrayList<Observer>();
+	}
+
 	@Override
 	public void afegirObserver(Observer observer) {
 		observers.add(observer);
